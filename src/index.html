@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <title>Portfolio - Evrad Mepiyou</title>
+
+    <style>
+        /* Animation orbitale */
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(120px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(120px) rotate(-360deg);
+            }
+        }
+
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+        }
+
+        .orbit-1 {
+            animation: orbit 8.1s linear infinite;
+        }
+
+        .orbit-2 {
+            animation: orbit 10.3s linear infinite;
+        }
+
+        .orbit-3 {
+            animation: orbit 12.5s linear infinite;
+        }
+
+        .orbit-4 {
+            animation: orbit 14.7s linear infinite;
+        }
+
+        .orbit-5 {
+            animation: orbit 16.7s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0C0E14] text-white font-sans">
+
+<!-- Navbar -->
+<header class="flex justify-between items-center px-6 py-4 border-b border-[#2E2E40] relative">
+    <div class="flex items-center gap-2">
+        <img src="img/logo.png" alt="MEP'S Logo" class="h-15 md:h-20" />
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+        <a href="#accueil" class="hover:text-[#9333EA]">Accueil</a>
+        <a href="#about" class="hover:text-[#9333EA]">À propos</a>
+        <a href="#skills" class="hover:text-[#9333EA]">Compétences</a>
+        <a href="#projects" class="hover:text-[#9333EA]">Projets</a>
+        <a href="#footer" class="hover:text-[#9333EA]">Contact</a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-white text-2xl">☰</button>
+    <nav id="mobile-menu"
+         class="hidden absolute top-full right-0 bg-[#1C1E29] w-48 flex-col p-4 rounded-md shadow-lg">
+        <a href="#accueil" class="block py-2 px-3 hover:bg-[#4F46E5] rounded">Accueil</a>
+        <a href="#about" class="block py-2 px-3 hover:bg-[#4F46E5] rounded">À propos</a>
+        <a href="#skills" class="block py-2 px-3 hover:bg-[#4F46E5] rounded">Compétences</a>
+        <a href="#projects" class="block py-2 px-3 hover:bg-[#4F46E5] rounded">Projets</a>
+        <a href="#footer" class="block py-2 px-3 hover:bg-[#4F46E5] rounded">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="accueil" class="flex flex-col md:flex-row justify-between items-center px-6 py-12">
+    <!-- Left -->
+    <div class="space-y-4">
+        <button class="px-3 py-1 rounded-full bg-[#1C1E29] text-sm text-white flex items-center gap-1">
+            👋 Salut!
+        </button>
+        <h1 class="text-4xl font-bold leading-tight">Evrad <br /> Mepiyou</h1>
+        <p class="text-gray-400">Fullstack Developer</p>
+        <div class="flex gap-4 text-gray-400 text-2xl">
+            <a href="https://github.com/Mepiyou" class="hover:text-[#4F46E5]"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/evrad-mepiyou-3b2437335/" class="hover:text-[#4F46E5]"><i class="fab fa-linkedin"></i></a>
+            <a href="https://gitlab.com/Mepiyou" class="hover:text-[#4F46E5]"><i class="fab fa-gitlab"></i></a>
+        </div>
+    </div>
+
+    <!-- Avatar + Icônes orbitantes -->
+    <div class="relative mt-10 md:mt-0 flex justify-center items-center">
+        <!-- Avatar -->
+        <img src="./img/avatar.webp" alt="Evrad Mepiyou" class="w-48 md:w-64 rounded-full relative z-10" />
+
+        <!-- Icônes en orbite -->
+        <div class="orbit orbit-1">
+            <div class="bg-[#1C1E29] p-3 rounded-full shadow-lg">
+                <i class="fab fa-react text-[#4F46E5] text-2xl"></i>
+            </div>
+        </div>
+        <div class="orbit orbit-2">
+            <div class="bg-[#1C1E29] p-3 rounded-full shadow-lg">
+                <i class="fas fa-database text-[#4F46E5] text-2xl"></i>
+            </div>
+        </div>
+        <div class="orbit orbit-3">
+            <div class="bg-[#1C1E29] p-3 rounded-full shadow-lg">
+                <i class="fab fa-node-js text-[#4F46E5] text-2xl"></i>
+            </div>
+        </div>
+        <div class="orbit orbit-4">
+            <div class="bg-[#1C1E29] p-3 rounded-full shadow-lg">
+                <i class="fab fa-python text-[#4F46E5] text-2xl"></i>
+            </div>
+        </div>
+
+        <div class="orbit orbit-5">
+            <div class="bg-[#1C1E29] p-3 rounded-full shadow-lg">
+                <i class="fab fa-php text-[#4F46E5] text-2xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right -->
+    <div class="mt-20 md:mt-0">
+        <a href="#" download
+           class="px-4 py-2 border border-[#4F46E5] text-[#4F46E5] rounded-md hover:bg-[#4F46E5] hover:text-white transition">
+            Mepiyou's CV ⬇
+        </a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="px-6 py-12 bg-[#1C1E29] mx-6 rounded-lg my-8">
+    <div class="flex flex-col lg:flex-row items-center gap-8">
+        <!-- Left - Profile Image -->
+        <div class="flex-shrink-0">
+            <img src="./img/moi.webp" alt="Evrad Mepiyou" class="rounded-full object-cover max-w-50 max-h-50" />
+        </div>
+
+        <!-- Center - Main Content -->
+        <div class="flex-1 text-center lg:text-left">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">
+                Salut, moi c'est Evrad Mepiyou.
+            </h2>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                Je suis développeur fullstack, passionné par la création d'applications et de logiciels intuitifs et
+                performants.
+                J'aime aussi explorer le monde de la data, analyser et transformer les informations pour en tirer de
+                la valeur.
+            </p>
+            <p class="text-gray-300 leading-relaxed mt-4 text-sm md:text-base">
+                Mon objectif : allier design, technologies et données pour donner vie à des projets utiles et
+                innovants.
+            </p>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="px-6 py-12">
+    <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes Compétences</h2>
+            <p class="text-gray-400 text-lg">Technologies et frameworks que je maîtrise</p>
+        </div>
+
+        <!-- Skills Grid -->
+        <!-- Frontend Section -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-center">
+                <i class="fas fa-laptop-code text-[#4F46E5] mr-2"></i>
+                Frontend Development
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#E34F26] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-html5 text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">HTML5</h4>
+                        <p class="text-gray-400 text-sm">Structure web moderne</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#1572B6] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-css3-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">CSS3</h4>
+                        <p class="text-gray-400 text-sm">Stylisation avancée</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#F7DF1E] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-js-square text-black text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">JavaScript</h4>
+                        <p class="text-gray-400 text-sm">Développement web dynamique</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#06B6D4] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-wind text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Tailwind CSS</h4>
+                        <p class="text-gray-400 text-sm">Framework CSS utilitaire</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#F24E1E] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-figma text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Figma</h4>
+                        <p class="text-gray-400 text-sm">Design & prototypage</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#FF6B6B] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">UI/UX</h4>
+                        <p class="text-gray-400 text-sm">Design d'interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend Section -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-center">
+                <i class="fas fa-server text-[#4F46E5] mr-2"></i>
+                Backend Development
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#339933] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-node-js text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Node.js</h4>
+                        <p class="text-gray-400 text-sm">Runtime JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#777BB4] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-php text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">PHP</h4>
+                        <p class="text-gray-400 text-sm">Développement backend</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#3776AB] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-python text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Python</h4>
+                        <p class="text-gray-400 text-sm">Backend & Data Science</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#ED8B00] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-java text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Java</h4>
+                        <p class="text-gray-400 text-sm">Applications enterprise</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#4F46E5] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">C</h4>
+                        <p class="text-gray-400 text-sm">Programmation système</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#00599C] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-cuttlefish text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">C++</h4>
+                        <p class="text-gray-400 text-sm">Programmation orientée objet</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#336791] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-database text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">PostgreSQL</h4>
+                        <p class="text-gray-400 text-sm">Base de données relationnelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data & Analytics Section -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-center">
+                <i class="fas fa-chart-line text-[#4F46E5] mr-2"></i>
+                Data & Analytics
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#68217A] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-chart-bar text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Power BI</h4>
+                        <p class="text-gray-400 text-sm">Business Intelligence</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#0078D4] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-search text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Power Query</h4>
+                        <p class="text-gray-400 text-sm">Transformation de données</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#0078D4] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Power Automate</h4>
+                        <p class="text-gray-400 text-sm">Automatisation</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1C1E29] p-6 rounded-lg hover:bg-[#252740] transition-colors group">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-[#3776AB] p-3 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-python text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Python Data</h4>
+                        <p class="text-gray-400 text-sm">Analyse de données</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="px-6 py-12">
+    <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes Projets</h2>
+            <p class="text-gray-400 text-lg">Découvrez quelques-unes de mes réalisations</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Project 7-->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/logoLoveApp.webp" alt="Projet 2"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">RevealMe</h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#777BB4] text-white rounded-full text-xs">PHP</span>
+                        <span class="px-2 py-1 bg-[#4479A1] text-white rounded-full text-xs">MySQL</span>
+                        <span class="px-2 py-1 bg-[#F7DF1E] text-black rounded-full text-xs">JavaScript</span>
+                        <span class="px-2 py-1 bg-[#0db7ed] text-white rounded-full text-xs">Docker</span>
+                        <span class="px-2 py-1 bg-[#003087] text-white rounded-full text-xs">PayPal</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Application de rencontre innovante où les utilisateurs découvrent les vraies personnalités à
+                        travers la conversation. Chat temps réel, matching géolocalisé et paiements sécurisés.
+                    </p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://gitlab.com/mepiyou1/loveapp"
+                           class="flex items-center gap-2 px-3 py-2 bg-[#FC6D26] text-white rounded-md hover:bg-[#E24329] transition-colors text-sm">
+                            <i class="fab fa-gitlab"></i>
+                            GitLab
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 1 -->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/frag.webp" alt=""
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <!-- Status Badge -->
+                    <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs font-medium">
+                                🔧 Maintenance
+                            </span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">My First Fragrances</h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#E34F26] text-white rounded-full text-xs">HTML5</span>
+                        <span class="px-2 py-1 bg-[#1572B6] text-white rounded-full text-xs">CSS3</span>
+                        <span class="px-2 py-1 bg-[#F7DF1E] text-black rounded-full text-xs">JavaScript</span>
+                        <span class="px-2 py-1 bg-[#06B6D4] text-white rounded-full text-xs">Tailwind</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Site e-commerce de parfums avec catalogue interactif, panier d'achat et intégration
+                        WhatsApp. Interface responsive mobile-first avec filtrage par catégorie.
+                    </p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://myfirst-fragrances.netlify.app/"
+                           class="flex items-center gap-2 px-3 py-2 border border-[#4F46E5] text-[#4F46E5] rounded-md hover:bg-[#4F46E5] hover:text-white transition-colors text-sm">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visiter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/tanialogo.webp" alt="Projet 2"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <!-- Status Badge -->
+                    <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-orange-500 text-white rounded-full text-xs font-medium">
+                                🚧 En cours
+                            </span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">t.f.lashes</h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#F7DF1E] text-black rounded-full text-xs">JavaScript</span>
+                        <span class="px-2 py-1 bg-[#003087] text-white rounded-full text-xs">PayPal</span>
+                        <span class="px-2 py-1 bg-[#00D9FF] text-white rounded-full text-xs">Netlify</span>
+                        <span class="px-2 py-1 bg-[#E34F26] text-white rounded-full text-xs">HTML5</span>
+                        <span class="px-2 py-1 bg-[#1572B6] text-white rounded-full text-xs">CSS3</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Application web serverless de réservation d'extensions de cils. Interface responsive avec
+                        paiement PayPal, emails automatiques et déploiement sur Netlify Functions.
+                    </p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://tflashes.netlify.app/"
+                           class="flex items-center gap-2 px-3 py-2 border border-[#4F46E5] text-[#4F46E5] rounded-md hover:bg-[#4F46E5] hover:text-white transition-colors text-sm">
+                            <i class="fas fa-calendar-check"></i>
+                            Tester
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/batnav.webp" alt="Projet 3"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">Bataille Navale </h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#777BB4] text-white rounded-full text-xs">PHP</span>
+                        <span class="px-2 py-1 bg-[#F7DF1E] text-black rounded-full text-xs">JavaScript</span>
+                        <span class="px-2 py-1 bg-[#E34F26] text-white rounded-full text-xs">HTML5</span>
+                        <span class="px-2 py-1 bg-[#1572B6] text-white rounded-full text-xs">CSS3</span>
+                        <span class="px-2 py-1 bg-[#4479A1] text-white rounded-full text-xs">MySQL</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Jeu de bataille navale web complet développé en 4 jours avec une architecture fullstack
+                        moderne. Les joueurs tentent de couler tous les bateaux adverses sur une grille interactive
+                        10x10.</p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Mepiyou/batnav2"
+                           class="flex items-center gap-2 px-3 py-2 bg-[#4F46E5] text-white rounded-md hover:bg-[#6366F1] transition-colors text-sm">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/poke.webp" alt="Projet 4"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">Pokémon Battle Arena</h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#ED8B00] text-white rounded-full text-xs">Java</span>
+                        <span class="px-2 py-1 bg-[#0D7377] text-white rounded-full text-xs">JavaFX</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Jeu de combat Pokémon 4v4 développé en Java avec JavaFX. Assemblez une équipe stratégique et
+                        affrontez une IA dans des combats tactiques au tour par tour.
+                    </p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Mepiyou/Pokemon"
+                           class="flex items-center gap-2 px-3 py-2 bg-[#4F46E5] text-white rounded-md hover:bg-[#6366F1] transition-colors text-sm">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div
+                    class="bg-[#1C1E29] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden">
+                    <img src="./img/path.webp" alt="Projet 5"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Project Name -->
+                    <h3 class="text-xl font-semibold mb-3">Pathfinding Algorithm</h3>
+
+                    <!-- Technologies Used -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-[#A8B9CC] text-black rounded-full text-xs">C</span>
+                        <span class="px-2 py-1 bg-[#2E8B57] text-white rounded-full text-xs">BFS Algorithm</span>
+                        <span class="px-2 py-1 bg-[#FF6B35] text-white rounded-full text-xs">Makefile</span>
+                        <span class="px-2 py-1 bg-[#6C5CE7] text-white rounded-full text-xs">Graph Theory</span>
+                    </div>
+
+                    <!-- Project Description -->
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Programme C d'algorithme de pathfinding pour trouver le plus court chemin dans un graphe.
+                        Parser de fichiers texte, implémentation BFS et architecture modulaire avec Makefile.
+                    </p>
+
+                    <!-- Project Links -->
+                    <div class="flex gap-3">
+                        <a href="https://gitlab.com/mepiyou1/pathfinding"
+                           class="flex items-center gap-2 px-3 py-2 bg-[#FC6D26] text-white rounded-md hover:bg-[#E24329] transition-colors text-sm">
+                            <i class="fab fa-gitlab"></i>
+                            GitLab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer enrichi -->
+<footer id="footer" class="bg-[#1C1E29] text-gray-400 text-center py-8 mt-12">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+        <span>&copy; 2024 Evrad Mepiyou. Tous droits réservés.</span>
+        <div class="flex gap-4 text-xl">
+            <a href="https://github.com/Mepiyou" class="hover:text-[#4F46E5]"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/evrad-mepiyou-3b2437335/" class="hover:text-[#4F46E5]"><i class="fab fa-linkedin"></i></a>
+            <a href="https://gitlab.com/Mepiyou" class="hover:text-[#4F46E5]"><i class="fab fa-gitlab"></i></a>
+        </div>
+    </div>
+    <div class="mt-4 flex flex-col md:flex-row justify-center items-center gap-6 text-base">
+        <!-- Numéro de téléphone cliquable -->
+        <a href="tel:+33775825640" class="flex items-center hover:text-[#4F46E5]">
+            <i class="fas fa-phone mr-2"></i>+33 7 75 82 56 40
+        </a>
+
+        <!-- Lien mail -->
+        <a href="mailto:mepiyouevradpro@gmail.com" class="flex items-center hover:text-[#4F46E5]">
+            <i class="fas fa-envelope mr-2"></i>Envoyer un mail
+        </a>
+    </div>
+
+</footer>
+
+<!-- Script Menu -->
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+</body>
+
+</html>
